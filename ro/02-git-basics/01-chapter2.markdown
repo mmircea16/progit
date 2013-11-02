@@ -7,10 +7,10 @@ să le salvați temporar in stash. Deasemeni veți vedea cum puteți seta Git sa
 greșeli ușor și rapid, cum sa navigați istoricul unui proiect, cum sa vedeți ce s-a schimbat in fiecare commit, cum să trimiteți schimbările
 către un repository online și cum să preluați ultimele schimbări dintr-un repository online.
 
-## Getting a Git Repository ##
+## Crearea unui Git repository ##
 
-You can get a Git project using two main approaches. The first takes an existing project or directory and imports it into Git.
-The second clones an existing Git repository from another server.
+Puteți crea un Git repository in 2 moduri. O modalitate este sa aveți un proiect sau un folder și să-l importați in Git.
+A doua modalitate este să clonați un Git repository deja existent.
 
 ### Initializing a Repository in an Existing Directory ###
 
