@@ -12,21 +12,27 @@ către un repository online și cum să preluați ultimele schimbări dintr-un r
 Puteți crea un Git repository in 2 moduri. O modalitate este sa aveți un proiect sau un folder și să-l importați in Git.
 A doua modalitate este să clonați un Git repository deja existent.
 
-### Initializing a Repository in an Existing Directory ###
+### Initializarea unui Git repository într-un director deja existent###
 
-If you’re starting to track an existing project in Git, you need to go to the project’s directory and type
+Dacă doriți să versionați un proiect deja existent in Git, trebuie sa deschideți un terminal, să navigați în acel proiect
+și să rulați următoarea comandă:
 
 	$ git init
 
-This creates a new subdirectory named `.git` that contains all of your necessary repository files — a Git repository skeleton. At this point, nothing in your project is tracked yet. (See *Chapter 9* for more information about exactly what files are contained in the `.git` directory you just created.)
+Această comandă crează un sub-folder numit `.git` care conține toate fișierele necesare unui Git repository.
+În acest moment, niciun fișier din proiect nu este versionat.(Citiți *Capitolul 9* pentru mai multe informatii despre ce
+fișiere se află în folderul `.git`.)
 
-If you want to start version-controlling existing files (as opposed to an empty directory), you should probably begin tracking those files and do an initial commit. You can accomplish that with a few `git add` commands that specify the files you want to track, followed by a commit:
+Pentru a începe versionarea fișierelor existente trebuie să adăugați acele fișiere pentru versionare și să faceți primul
+commit. Puteți realiza asta cu câteva comenzi `git add` prin care adăugați pentru versionare fișierele pe care le doriți,
+urmate de un commit:
 
 	$ git add *.c
 	$ git add README
-	$ git commit -m 'initial project version'
+	$ git commit -m 'versiunea inițială a proiectului'
 
-We’ll go over what these commands do in just a minute. At this point, you have a Git repository with tracked files and an initial commit.
+Vom trece în revistă aceste comenzi imediat. În acest moment aveți un Git repository cu fișiere adăugate pentru versionare
+și un commit inițial.
 
 ### Cloning an Existing Repository ###
 
