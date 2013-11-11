@@ -34,21 +34,31 @@ urmate de un commit:
 Vom trece în revistă aceste comenzi imediat. În acest moment aveți un Git repository cu fișiere adăugate pentru versionare
 și un commit inițial.
 
-### Cloning an Existing Repository ###
+### Clonarea unui repository existent ###
 
-If you want to get a copy of an existing Git repository — for example, a project you’d like to contribute to — the command you need is `git clone`. If you’re familiar with other VCS systems such as Subversion, you’ll notice that the command is `clone` and not `checkout`. This is an important distinction — Git receives a copy of nearly all data that the server has. Every version of every file for the history of the project is pulled down when you run `git clone`. In fact, if your server disk gets corrupted, you can use any of the clones on any client to set the server back to the state it was in when it was cloned (you may lose some server-side hooks and such, but all the versioned data would be there — see *Chapter 4* for more details).
+Ca să obții o copie a unui Git repository existent - spre exemplu pentru un proiect la care vrei să contribui - comanda
+pe care trebuie sa o folosești este `git clone`. Daca ești familiar cu alte sisteme de versionare a software-ului, precum
+Subversion, vei observa că numele comenzii este `clone` și nu `checkout`. Aceasta este o distincție importantă - Git
+primește aproape toate datele pe care le are serverul. Fiecare versiune a fiecărui fișier din istoria proiectului este
+transmisă când rulezi comanda `git clone`. Aceasta înseamnă că, dacă hard-diskul serverului întâmpină vreo problemă, se
+poate folosi orice clonă din orice client pentru a reda serverului starea în care a fost în momentul în care a fost clonat.
+(ai putea pierde lucruri precum server-side hooks, dar toate datele versionate vor fi acolo - citește capitolul 4 pentru mai multe detalii).
 
-You clone a repository with `git clone [url]`. For example, if you want to clone the Ruby Git library called Grit, you can do so like this:
+Clonezi un repository folosind `git clone [url]`. Spre exemplu daca vrei sa clonezi libraria Ruby numita Grit, o poți face așa
 
 	$ git clone git://github.com/schacon/grit.git
 
-That creates a directory named `grit`, initializes a `.git` directory inside it, pulls down all the data for that repository, and checks out a working copy of the latest version. If you go into the new `grit` directory, you’ll see the project files in there, ready to be worked on or used. If you want to clone the repository into a directory named something other than grit, you can specify that as the next command-line option:
+Comanda de mai sus crează un directoriu numit `grit`, inițializează un directoriu `.git` înăuntru, downloadează tot continutul
+repository-ului și setează versiunea de lucru ca fiind cea curentă. Noul directoriu `grit` conține fișierele proiectului,
+gata pentru a fi folosite sau modificate. Un repository se poate clona într-un fisier specificat precum în comanda urmatoare
 
 	$ git clone git://github.com/schacon/grit.git mygrit
 
-That command does the same thing as the previous one, but the target directory is called `mygrit`.
+Această comandă are același efect precum cea de dinainte, doar ca directorul țintă este `mygrit`.
 
-Git has a number of different transfer protocols you can use. The previous example uses the `git://` protocol, but you may also see `http(s)://` or `user@server:/path.git`, which uses the SSH transfer protocol. *Chapter 4* will introduce all of the available options the server can set up to access your Git repository and the pros and cons of each.
+Git poate fi folosit în combinație cu câteva protocoale de transfer. Exemplu de mai dinainte folosește protocolul `git://`
+dar printre altele se numară  `http(s)://` sau `user@server:/path.git`, care folosesc protocolul de transfer SSH. Capitolul
+4 va introduce toate opțiunile valabile pentru a accesa un Git repository și va discuta argumentele pro și contra fiecăruia.
 
 ## Recording Changes to the Repository ##
 
